@@ -34,11 +34,6 @@ function paintFavorites() {
   console.log(favorites);
   for (const favorite of favorites) {
     htmlFav += `<li class="js_favorite main__shows--favorites__li" id="${favorite.show.id}">`;
-    htmlFav += ` <input
-    type="button"
-    value="x"
-    class="main__paint--favorites__erase js_erasebtn"
-  />`;
     if (favorite.show.image === null) {
       htmlFav += `<img src="${imageNull}" alt="" />`;
     } else {

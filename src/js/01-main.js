@@ -6,8 +6,6 @@
 const button = document.querySelector('.js_btn');
 //Llamada al boton de reset
 const resetButton = document.querySelector('.js_resetbtn');
-//Llamada al boton de reset
-const eraseButton = document.querySelector('.js_erasebtn');
 //Llamada a lo q escribe el usuario
 const userInput = document.querySelector('.js_input');
 //Llamada al apartado series
