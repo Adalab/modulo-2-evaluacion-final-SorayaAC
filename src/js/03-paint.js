@@ -2,7 +2,7 @@
 // función para saber si la seríe está clicada
 function isClicked(serie) {
   const clickedFound = favorites.find((fav) => {
-    return fav.show.id === fav.show.id;
+    return fav.show.id === serie.show.id;
   });
   if (clickedFound === undefined) {
     return false;
