@@ -1,55 +1,52 @@
 'use strict';
-
-
-
-
-function handleseries(ev){
-  console.log(ev.currentTarget.id);
+// función para escuchar el click
+function listenshows(){
+  const listshows = document.querySelectorAll('.js_serie');
+  for (const serieElement of listshows) {
+    serieElement.addEventListener('click', handleListSeries);
+  }
+}
+function handleListSeries(ev){
   const selectedSerie = parseInt(ev.currentTarget.id);
-  const clickedSerie = seriesData.find((serie) => {
-
-  return serie.show.id === selectedSerie ;
+  const selectedSerieId = seriesData.find((serie) => {
+    return serie.show.id === selectedSerie ;
   });
   console.log(selectedSerie);
-  console.log(clickedSerie);
+  console.log(selectedSerieId);
   console.log(favorites);
   const favoritesFound = favorites.findIndex((fav) => {
     return fav.show.id === selectedSerie;
   });
+
   if (favoritesFound === -1) {
-    favorites.push(clickedSerie);
+    favorites.push(selectedSerieId);
   } else {
     favorites.splice(favoritesFound, 1);
   }
+  paintSeries();
   paintFavorites();
+  setInLocalStorage()
 }
-
-
-
-
-function listenshows(){
-  const listshows = document.querySelectorAll('.js_serie');
-  for (const serieElement of listshows) {
-    serieElement.addEventListener('click', handleseries);
-    
-  }
-}
-
-
-
-series.addEventListener('click',listenshows);
-
+//función para pintar favoritos
 function paintFavorites() {
-  let html = '';
+  favoritesHtml.innerHTML = '';
+  let htmlFav = '';
+  console.log(favorites);
   for (const favorite of favorites) {
-    html += `<li class="js_favorite main__shows--favorites__li" id="${favorite.show.id}">`;
+    htmlFav += `<li class="js_favorite main__shows--favorites__li" id="${favorite.show.id}">`;
+    htmlFav += ` <input
+    type="button"
+    value="x"
+    class="main__paint--favorites__erase js_erasebtn"
+  />`;
     if (favorite.show.image === null) {
-      html += `<img src="${imageNull}" alt="" />`;
+      htmlFav += `<img src="${imageNull}" alt="" />`;
     } else {
-      html += `<img src="${favorite.show.image.medium}" alt="" >`;
+      htmlFav += `<img src="${favorite.show.image.medium}" alt="" >`;
     }
-    html += `<h3>${favorite.show.name}</h3>`;
-    html += `</li>`;
-    favoriteshtml.innerHTML = html;
+    htmlFav += `<h3>${favorite.show.name}</h3>`;
+    htmlFav += `</li>`;
+    favoritesHtml.innerHTML = htmlFav;
   }
+  listenshows();
 }

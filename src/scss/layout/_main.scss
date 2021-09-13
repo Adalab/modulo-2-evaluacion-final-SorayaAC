@@ -65,19 +65,26 @@
 			border: solid #db202c;
 			border-radius: 20px;
 			display: flex;
+			flex-direction: column;
+			align-items: center;
+			
             &__title{
                 color: #db202c;
                 font-family: 'Oswald', sans-serif;
-            }
 			&__ul {
 				padding: 25px 25px 25px 25px;
-               
+				
+				
 			}
 			&__li {
 				font-size: 20px;
+				
 			}
 		}
 	}
 }
 
- 
+ .clicked{
+	 border: solid blue;
+ }
+}

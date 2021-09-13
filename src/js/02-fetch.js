@@ -9,9 +9,9 @@ function apiInfo() {
     //data es lo q devuelve json
     .then((data) => {
       seriesData = data;
-      console.log(seriesData);
       paintSeries();
+      setInLocalStorage()
     });
 }
-
+//evento click botón
 button.addEventListener('click', apiInfo);
