@@ -4,31 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <title>My TV series</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <title>Seriesflix</title>
   </head>
   <body>
-    <header>
-      <h1>Buscador de series</h1>
+    <header class="header">
+      <h1 class="header__title">
+        <a href="https://fontmeme.com/netflix-font/"
+          ><img
+            src="https://fontmeme.com/permalink/210912/eb348afb0c354bb3365863d330965ff4.png"
+            alt="netflix-font"
+            border="0"
+        /></a>
+      </h1>
     </header>
 
-    <main>
-      <form class="js_form" action="">
-        <input type="text" name="" id="" class="js_input" />
-        <button class="js_btn">Search</button>
-        <input type="button" value="Reset" class="js_reset" />
+    <main class="main">
+      <form class="js_form main__form" action="">
+        <input type="text" name="" id="" class="js_input main__input" />
+        <button class="js_btn main__btn">Search</button>
       </form>
-      <ul class="js_series">
-        <!-- Codigo generado desde JS -->
-        <!-- <li>
-          <img src="" alt="" />
-          <h2></h2>
-        </li> -->
-        <!-- Hasta aquí el código generado desde JS -->
-      </ul>
+      <section class="main__paint">
+        <article class="main__paint--series">
+          <h2 class="main__paint--series__title">Resultados</h2>
+          <ul class="js_series main__paint--series__ul">
+            <!-- Codigo generado desde JS -->
+
+            <!-- Hasta aquí el código generado desde JS -->
+          </ul>
+        </article>
+        <article class="main__paint--favorites">
+          <input
+            type="button"
+            value="Reset"
+            class=".js_resetbtn main__paint--favorites__resetbtn"
+          />
+          <h2 class="main__paint--favorites__title">Series Favoritas</h2>
+          <ul class="js_favorites main__paint--favorites__ul">
+            <!-- Codigo generado desde JS -->
+
+            <!-- Hasta aquí el código generado desde JS -->
+          </ul>
+        </article>
+      </section>
     </main>
 
-    <footer>&copy; Soraya Alonso 2021</footer>
+    <footer class="footer">
+      <p class="footer__text">&copy; Soraya Alonso 2021</p>
+    </footer>
+
 
     <script src="./assets/js/main.js"></script>
   </body>

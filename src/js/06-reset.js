@@ -2,8 +2,8 @@
 
 function eraseAllFavorites (){
     favorites = [];
-    localStorage.removeItem(favorites);
-    // volver a pintar
+    localStorage.removeItem('favorites');
+    paintFavorites();
 }
 
 // function eraseOneFavorite(){
