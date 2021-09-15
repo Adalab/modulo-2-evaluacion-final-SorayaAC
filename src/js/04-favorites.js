@@ -27,6 +27,7 @@ function handleListSeries(ev){
   paintFavorites();
   setInLocalStorage()
 }
+
 //función para pintar favoritos
 function paintFavorites() {
   favoritesHtml.innerHTML = '';
