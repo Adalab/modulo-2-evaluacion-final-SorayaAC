@@ -27,6 +27,11 @@ function handleListSeries(ev){
   paintFavorites();
   setInLocalStorage()
 }
+function paintLog(){
+  for (const favorite of favorites) {
+    console.log(favorite.show.name);
+  }
+}
 //función para pintar favoritos
 function paintFavorites() {
   favoritesHtml.innerHTML = '';
@@ -45,3 +50,4 @@ function paintFavorites() {
   }
   listenshows();
 }
+logBtn.addEventListener('click',paintLog );

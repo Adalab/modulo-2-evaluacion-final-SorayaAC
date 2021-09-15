@@ -28,6 +28,7 @@ function paintSeries() {
       html += `<img src="${serie.show.image.medium}" alt="" >`;
     }
     html += `<h3>${serie.show.name}</h3>`;
+    html += `<h3>${serie.show.status}</h3>`;
     html += `</li>`;
   }
   series.innerHTML = html;

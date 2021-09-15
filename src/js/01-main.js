@@ -15,6 +15,7 @@ const favoritesHtml = document.querySelector('.js_favorites');
 //imagen null por defecto
 const imageNull= `https://via.placeholder.com/210x295/ffffff/666666/?text=TV.`;
 //Array vacío para guardar los datos que me devuelve la api
+const logBtn = document.querySelector('.js_logbtn');
 let seriesData = [];
 //Array vacío para guardar los datos de favoritos
 let favorites = [];
