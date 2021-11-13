@@ -22,13 +22,15 @@ function paintSeries() {
       clickedClass = '';
     }
 
-    html += `<li class="js_serie main__shows--series__li ${clickedClass}" id="${serie.show.id}">`;
+    html += `<li class="js_serie list__item ${clickedClass}" id="${serie.show.id}">`;
+
     if (serie.show.image === null) {
-      html += `<img class="main__shows--series__img" src="${imageNull}" alt="" />`;
+      html += `<img class="list__item--img" src="${imageNull}" alt="" />`;
     } else {
-      html += `<img class="main__shows--series__item" src="${serie.show.image.medium}" alt="" >`;
+      html += `<img class="list__item--img" src="${serie.show.image.medium}" alt="" >`;
     }
-    html += `<h3>${serie.show.name}</h3></div>`;
+    html += `<h3 class="list__item--title">${serie.show.name}</h3>`;
+
     html += `</li>`;
   }
   series.innerHTML = html;

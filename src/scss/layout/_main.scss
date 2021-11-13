@@ -37,80 +37,80 @@
         border: solid #ea4c89;
         color: #ea4c89;
 	}
-	&__paint {
-		display: flex;
+
+}
+
+.list{ 
+	display: flex;
 		flex-direction: column;
-		// margin-left: 35px;
+		
+		align-items: center;
 		text-align: center;
 		justify-content: center;
-		
-  		
-		&--series {
+	
+		&__item{
 			
-			// border: solid #db202c;
-			// border-radius: 20px;
-			// margin-left: 35px;
-			// width: 50%;
-			// height: auto;
-            &__title{
-                color: #ea4c89;
-                
-            }
-
-			&__ul {
-				justify-content: center;
-				display: flex;
-				flex-wrap: wrap;
-				
-                
-			}
-			&__li {
-				list-style: none;
-				font-size: 20px;
-				
-			}
-
-			&__item {
-				
-			// 	height: 50px;
-			// 	width: 100px;
 			background-color: white;
-			 }
-		}
-		&--favorites {
-		
-		
-		
-		
-		color: #ea4c89;
-		text-decoration: none;
-        
-			// border: solid #db202c;
-			// border-radius: 20px;			
-			// padding-left: 15px;
-			// padding-right: 15px;
-			// display: flex;
-			// flex-direction: column;
-			// align-items: center;
+			width: 120px;
+			height: 100px;
+			margin-bottom: 10px;
+			padding-bottom: 50px;
+			padding-top: 20px;
+			border-radius: 20px;
+			&--img{
+				width: 75px;
+			height: 100px;
 			
-            &__title{
-                color: #ea4c89;
-               
-			&__ul {
-				// padding: 25px 25px 25px 25px;
-				
-				
 			}
-			&__li {
-				// font-size: 20px;
-				
+
+			&--title{
+				margin-top: 7px;
+				color: #ea4c89;	
 			}
 		}
-	}
 }
 
- .clicked{
-	 border: solid blue;
- }
-}
+
+
+
+
+	
+
+
+	// 	&--favorites {
+		
+		
+		
+		
+	// 	color: #ea4c89;
+	// 	text-decoration: none;
+        
+	// 		// border: solid #db202c;
+	// 		// border-radius: 20px;			
+	// 		// padding-left: 15px;
+	// 		// padding-right: 15px;
+	// 		// display: flex;
+	// 		// flex-direction: column;
+	// 		// align-items: center;
+			
+    //         &__title{
+    //             color: #ea4c89;
+               
+	// 		&__ul {
+	// 			// padding: 25px 25px 25px 25px;
+				
+				
+	// 		}
+	// 		&__li {
+	// 			// font-size: 20px;
+				
+	// 		}
+	// 	}
+	// }
+
+
+//  .clicked{
+// 	background-color: greenyellow;
+//  }
+
 
