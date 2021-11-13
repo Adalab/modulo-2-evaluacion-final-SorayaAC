@@ -1,4 +1,17 @@
  .header{
-    margin-top: 25px;
-    text-align: center;
+    background-color: #002b4f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    &__title{
+        margin-top: 20px;
+        font-size: 30px;
+        color:  #ea4c89;
+        
+        
+        
+    }
 }
+

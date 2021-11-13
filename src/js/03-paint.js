@@ -6,14 +6,14 @@ function isClicked(serie) {
   });
   if (clickedFound === undefined) {
     return false;
-  } else { 
+  } else {
     return true;
   }
 }
 //funcion que pinta las series
 function paintSeries() {
   let html = '';
-  let clickedClass= '';
+  let clickedClass = '';
   for (const serie of seriesData) {
     const isClickedSerie = isClicked(serie);
     if (isClickedSerie === true) {
@@ -21,13 +21,14 @@ function paintSeries() {
     } else {
       clickedClass = '';
     }
+
     html += `<li class="js_serie main__shows--series__li ${clickedClass}" id="${serie.show.id}">`;
     if (serie.show.image === null) {
-      html += `<img src="${imageNull}" alt="" />`;
+      html += `<img class="main__shows--series__img" src="${imageNull}" alt="" />`;
     } else {
-      html += `<img src="${serie.show.image.medium}" alt="" >`;
+      html += `<img class="main__shows--series__item" src="${serie.show.image.medium}" alt="" >`;
     }
-    html += `<h3>${serie.show.name}</h3>`;
+    html += `<h3>${serie.show.name}</h3></div>`;
     html += `</li>`;
   }
   series.innerHTML = html;
