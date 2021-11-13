@@ -13,10 +13,12 @@ const series = document.querySelector('.js_series');
 //Llamada al apartado favoritos
 const favoritesHtml = document.querySelector('.js_favorites');
 //imagen null por defecto
-const imageNull= `https://via.placeholder.com/210x295/ffffff/666666/?text=TV.`;
+const imageNull = `https://via.placeholder.com/210x295/ffffff/666666/?text=TV.`;
 //Array vacío para guardar los datos que me devuelve la api
 let seriesData = [];
 //Array vacío para guardar los datos de favoritos
 let favorites = [];
 //Función para no recarcar la pag al dar a intro
-document.querySelector('.js_form').addEventListener('submit', (ev) => {ev.preventDefault();});
+document.querySelector('.js_form').addEventListener('submit', (ev) => {
+  ev.preventDefault();
+});

@@ -1,15 +1,16 @@
 'use strict';
 // función para escuchar el click
-function listenshows(){
+
+function listenshows() {
   const listshows = document.querySelectorAll('.js_serie');
   for (const serieElement of listshows) {
     serieElement.addEventListener('click', handleListSeries);
   }
 }
-function handleListSeries(ev){
+function handleListSeries(ev) {
   const selectedSerie = parseInt(ev.currentTarget.id);
   const selectedSerieId = seriesData.find((serie) => {
-    return serie.show.id === selectedSerie ;
+    return serie.show.id === selectedSerie;
   });
   console.log(selectedSerie);
   console.log(selectedSerieId);
@@ -25,7 +26,7 @@ function handleListSeries(ev){
   }
   paintSeries();
   paintFavorites();
-  setInLocalStorage()
+  setInLocalStorage();
 }
 //función para pintar favoritos
 function paintFavorites() {
@@ -33,13 +34,13 @@ function paintFavorites() {
   let htmlFav = '';
   console.log(favorites);
   for (const favorite of favorites) {
-    htmlFav += `<li class="js_favorite main__shows--favorites__li" id="${favorite.show.id}">`;
+    htmlFav += `<li class="js_favorite favorites__item" id="${favorite.show.id}">`;
     if (favorite.show.image === null) {
-      htmlFav += `<img src="${imageNull}" alt="" />`;
+      htmlFav += `<img class="favorites__item--img" src="${imageNull}" alt="" />`;
     } else {
-      htmlFav += `<img src="${favorite.show.image.medium}" alt="" >`;
+      htmlFav += `<img class="favorites__item--img" src="${favorite.show.image.medium}" alt="" >`;
     }
-    htmlFav += `<h3>${favorite.show.name}</h3>`;
+    htmlFav += `<h3 class="favorites__item--title">${favorite.show.name}</h3>`;
     htmlFav += `</li>`;
     favoritesHtml.innerHTML = htmlFav;
   }
